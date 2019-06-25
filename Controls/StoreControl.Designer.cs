@@ -34,29 +34,31 @@
             this.btnNewItem = new System.Windows.Forms.Button();
             this.btnListItems = new System.Windows.Forms.Button();
             this.pnlBasement = new System.Windows.Forms.Panel();
-            this.pnlAddItem = new System.Windows.Forms.Panel();
             this.pnlListItems = new System.Windows.Forms.Panel();
+            this.tblListDashboard = new System.Windows.Forms.TableLayoutPanel();
+            this.flwListItems = new System.Windows.Forms.FlowLayoutPanel();
+            this.pnlAddItem = new System.Windows.Forms.Panel();
+            this.tblNewItemBasemeent = new System.Windows.Forms.TableLayoutPanel();
             this.tblNewItem = new System.Windows.Forms.TableLayoutPanel();
+            this.txtAmount = new System.Windows.Forms.TextBox();
+            this.txtName = new System.Windows.Forms.TextBox();
             this.lblName = new System.Windows.Forms.Label();
             this.lblUnit = new System.Windows.Forms.Label();
             this.lblAmount = new System.Windows.Forms.Label();
             this.cmbShop = new System.Windows.Forms.ComboBox();
             this.txtPrize = new System.Windows.Forms.TextBox();
-            this.txtName = new System.Windows.Forms.TextBox();
-            this.txtAmount = new System.Windows.Forms.TextBox();
             this.cmbUnit = new System.Windows.Forms.ComboBox();
             this.btnAdd = new System.Windows.Forms.Button();
-            this.tblNewItemBasemeent = new System.Windows.Forms.TableLayoutPanel();
-            this.tblListDashboard = new System.Windows.Forms.TableLayoutPanel();
-            this.flwListItems = new System.Windows.Forms.FlowLayoutPanel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtCategory = new System.Windows.Forms.TextBox();
             this.tblMagazine.SuspendLayout();
             this.flwMagazineMenu.SuspendLayout();
             this.pnlBasement.SuspendLayout();
-            this.pnlAddItem.SuspendLayout();
             this.pnlListItems.SuspendLayout();
-            this.tblNewItem.SuspendLayout();
-            this.tblNewItemBasemeent.SuspendLayout();
             this.tblListDashboard.SuspendLayout();
+            this.pnlAddItem.SuspendLayout();
+            this.tblNewItemBasemeent.SuspendLayout();
+            this.tblNewItem.SuspendLayout();
             this.SuspendLayout();
             // 
             // tblMagazine
@@ -121,14 +123,51 @@
             // 
             // pnlBasement
             // 
-            this.pnlBasement.Controls.Add(this.pnlListItems);
             this.pnlBasement.Controls.Add(this.pnlAddItem);
+            this.pnlBasement.Controls.Add(this.pnlListItems);
             this.pnlBasement.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlBasement.Location = new System.Drawing.Point(100, 0);
             this.pnlBasement.Margin = new System.Windows.Forms.Padding(0);
             this.pnlBasement.Name = "pnlBasement";
             this.pnlBasement.Size = new System.Drawing.Size(734, 552);
             this.pnlBasement.TabIndex = 1;
+            // 
+            // pnlListItems
+            // 
+            this.pnlListItems.Controls.Add(this.tblListDashboard);
+            this.pnlListItems.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlListItems.Location = new System.Drawing.Point(0, 0);
+            this.pnlListItems.Name = "pnlListItems";
+            this.pnlListItems.Size = new System.Drawing.Size(734, 552);
+            this.pnlListItems.TabIndex = 1;
+            // 
+            // tblListDashboard
+            // 
+            this.tblListDashboard.ColumnCount = 1;
+            this.tblListDashboard.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tblListDashboard.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tblListDashboard.Controls.Add(this.flwListItems, 0, 1);
+            this.tblListDashboard.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tblListDashboard.Location = new System.Drawing.Point(0, 0);
+            this.tblListDashboard.Margin = new System.Windows.Forms.Padding(0);
+            this.tblListDashboard.Name = "tblListDashboard";
+            this.tblListDashboard.RowCount = 2;
+            this.tblListDashboard.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.tblListDashboard.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tblListDashboard.Size = new System.Drawing.Size(734, 552);
+            this.tblListDashboard.TabIndex = 0;
+            // 
+            // flwListItems
+            // 
+            this.flwListItems.AutoScroll = true;
+            this.flwListItems.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flwListItems.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.flwListItems.Location = new System.Drawing.Point(0, 53);
+            this.flwListItems.Margin = new System.Windows.Forms.Padding(0, 3, 0, 3);
+            this.flwListItems.Name = "flwListItems";
+            this.flwListItems.Size = new System.Drawing.Size(734, 496);
+            this.flwListItems.TabIndex = 0;
+            this.flwListItems.WrapContents = false;
             // 
             // pnlAddItem
             // 
@@ -139,14 +178,21 @@
             this.pnlAddItem.Size = new System.Drawing.Size(734, 552);
             this.pnlAddItem.TabIndex = 0;
             // 
-            // pnlListItems
+            // tblNewItemBasemeent
             // 
-            this.pnlListItems.Controls.Add(this.tblListDashboard);
-            this.pnlListItems.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlListItems.Location = new System.Drawing.Point(0, 0);
-            this.pnlListItems.Name = "pnlListItems";
-            this.pnlListItems.Size = new System.Drawing.Size(734, 552);
-            this.pnlListItems.TabIndex = 1;
+            this.tblNewItemBasemeent.ColumnCount = 1;
+            this.tblNewItemBasemeent.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tblNewItemBasemeent.Controls.Add(this.tblNewItem, 0, 0);
+            this.tblNewItemBasemeent.Controls.Add(this.btnAdd, 0, 1);
+            this.tblNewItemBasemeent.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tblNewItemBasemeent.Location = new System.Drawing.Point(0, 0);
+            this.tblNewItemBasemeent.Margin = new System.Windows.Forms.Padding(0);
+            this.tblNewItemBasemeent.Name = "tblNewItemBasemeent";
+            this.tblNewItemBasemeent.RowCount = 2;
+            this.tblNewItemBasemeent.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tblNewItemBasemeent.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tblNewItemBasemeent.Size = new System.Drawing.Size(734, 552);
+            this.tblNewItemBasemeent.TabIndex = 1;
             // 
             // tblNewItem
             // 
@@ -161,6 +207,8 @@
             this.tblNewItem.Controls.Add(this.cmbShop, 0, 3);
             this.tblNewItem.Controls.Add(this.txtPrize, 1, 3);
             this.tblNewItem.Controls.Add(this.cmbUnit, 1, 1);
+            this.tblNewItem.Controls.Add(this.label1, 0, 4);
+            this.tblNewItem.Controls.Add(this.txtCategory, 1, 4);
             this.tblNewItem.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tblNewItem.Location = new System.Drawing.Point(0, 0);
             this.tblNewItem.Margin = new System.Windows.Forms.Padding(0);
@@ -174,6 +222,28 @@
             this.tblNewItem.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.tblNewItem.Size = new System.Drawing.Size(734, 512);
             this.tblNewItem.TabIndex = 0;
+            // 
+            // txtAmount
+            // 
+            this.txtAmount.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.txtAmount.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.txtAmount.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.txtAmount.Location = new System.Drawing.Point(370, 113);
+            this.txtAmount.Name = "txtAmount";
+            this.txtAmount.Size = new System.Drawing.Size(294, 23);
+            this.txtAmount.TabIndex = 7;
+            // 
+            // txtName
+            // 
+            this.txtName.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.txtName.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.txtName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.txtName.Location = new System.Drawing.Point(370, 13);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(294, 23);
+            this.txtName.TabIndex = 5;
             // 
             // lblName
             // 
@@ -219,7 +289,7 @@
             "Kaufland",
             "Makro",
             "Aldi"});
-            this.cmbShop.Location = new System.Drawing.Point(160, 163);
+            this.cmbShop.Location = new System.Drawing.Point(160, 158);
             this.cmbShop.Name = "cmbShop";
             this.cmbShop.Size = new System.Drawing.Size(204, 33);
             this.cmbShop.TabIndex = 3;
@@ -235,28 +305,6 @@
             this.txtPrize.Name = "txtPrize";
             this.txtPrize.Size = new System.Drawing.Size(294, 23);
             this.txtPrize.TabIndex = 4;
-            // 
-            // txtName
-            // 
-            this.txtName.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtName.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.txtName.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.txtName.Location = new System.Drawing.Point(370, 13);
-            this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(294, 23);
-            this.txtName.TabIndex = 5;
-            // 
-            // txtAmount
-            // 
-            this.txtAmount.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtAmount.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.txtAmount.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.txtAmount.Location = new System.Drawing.Point(370, 113);
-            this.txtAmount.Name = "txtAmount";
-            this.txtAmount.Size = new System.Drawing.Size(294, 23);
-            this.txtAmount.TabIndex = 7;
             // 
             // cmbUnit
             // 
@@ -289,49 +337,27 @@
             this.btnAdd.UseVisualStyleBackColor = false;
             this.btnAdd.Click += new System.EventHandler(this.BtnAdd_Click);
             // 
-            // tblNewItemBasemeent
+            // label1
             // 
-            this.tblNewItemBasemeent.ColumnCount = 1;
-            this.tblNewItemBasemeent.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tblNewItemBasemeent.Controls.Add(this.tblNewItem, 0, 0);
-            this.tblNewItemBasemeent.Controls.Add(this.btnAdd, 0, 1);
-            this.tblNewItemBasemeent.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tblNewItemBasemeent.Location = new System.Drawing.Point(0, 0);
-            this.tblNewItemBasemeent.Margin = new System.Windows.Forms.Padding(0);
-            this.tblNewItemBasemeent.Name = "tblNewItemBasemeent";
-            this.tblNewItemBasemeent.RowCount = 2;
-            this.tblNewItemBasemeent.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tblNewItemBasemeent.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tblNewItemBasemeent.Size = new System.Drawing.Size(734, 552);
-            this.tblNewItemBasemeent.TabIndex = 1;
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label1.Location = new System.Drawing.Point(268, 212);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(96, 25);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "Kategoria";
             // 
-            // tblListDashboard
+            // txtCategory
             // 
-            this.tblListDashboard.ColumnCount = 1;
-            this.tblListDashboard.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tblListDashboard.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tblListDashboard.Controls.Add(this.flwListItems, 0, 1);
-            this.tblListDashboard.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tblListDashboard.Location = new System.Drawing.Point(0, 0);
-            this.tblListDashboard.Margin = new System.Windows.Forms.Padding(0);
-            this.tblListDashboard.Name = "tblListDashboard";
-            this.tblListDashboard.RowCount = 2;
-            this.tblListDashboard.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.tblListDashboard.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tblListDashboard.Size = new System.Drawing.Size(734, 552);
-            this.tblListDashboard.TabIndex = 0;
-            // 
-            // flwListItems
-            // 
-            this.flwListItems.AutoScroll = true;
-            this.flwListItems.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flwListItems.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flwListItems.Location = new System.Drawing.Point(0, 53);
-            this.flwListItems.Margin = new System.Windows.Forms.Padding(0, 3, 0, 3);
-            this.flwListItems.Name = "flwListItems";
-            this.flwListItems.Size = new System.Drawing.Size(734, 496);
-            this.flwListItems.TabIndex = 0;
-            this.flwListItems.WrapContents = false;
+            this.txtCategory.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.txtCategory.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.txtCategory.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.txtCategory.Location = new System.Drawing.Point(370, 213);
+            this.txtCategory.Name = "txtCategory";
+            this.txtCategory.Size = new System.Drawing.Size(294, 23);
+            this.txtCategory.TabIndex = 10;
             // 
             // StoreControl
             // 
@@ -344,12 +370,12 @@
             this.tblMagazine.ResumeLayout(false);
             this.flwMagazineMenu.ResumeLayout(false);
             this.pnlBasement.ResumeLayout(false);
-            this.pnlAddItem.ResumeLayout(false);
             this.pnlListItems.ResumeLayout(false);
+            this.tblListDashboard.ResumeLayout(false);
+            this.pnlAddItem.ResumeLayout(false);
+            this.tblNewItemBasemeent.ResumeLayout(false);
             this.tblNewItem.ResumeLayout(false);
             this.tblNewItem.PerformLayout();
-            this.tblNewItemBasemeent.ResumeLayout(false);
-            this.tblListDashboard.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -376,5 +402,7 @@
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.TableLayoutPanel tblListDashboard;
         private System.Windows.Forms.FlowLayoutPanel flwListItems;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtCategory;
     }
 }

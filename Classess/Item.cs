@@ -18,6 +18,8 @@ namespace LesnaPolanaWinApp.Classess
         public string Name { get; set; }
         public string Unit { get; set; }
         public double Amount { get; set; }
+
+        public string Category { get; set; }
         public DateTime LastModified { get; set; }
 
         public Dictionary<string, double> Shops;
@@ -25,7 +27,7 @@ namespace LesnaPolanaWinApp.Classess
         public string userName { get; set; }
         public Item(){}
 
-        public Item(string name, string unit, double amountIn, Dictionary<string, double> shops, User user)
+        public Item(string name, string unit, double amountIn, Dictionary<string, double> shops, User user, string category)
         {
             this.Name = name;
             this.Unit = unit;
@@ -33,6 +35,7 @@ namespace LesnaPolanaWinApp.Classess
             this.Amount = amountIn;
             this.LastModified = DateTime.UtcNow;
             this.userName = string.Format("{0}_{1}", user.Name, user.Surname);
+            this.Category = category;
         }
     }
 }

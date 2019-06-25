@@ -56,8 +56,9 @@ namespace LesnaPolanaWinApp.Controls
             {
                 string name = txtName.Text;
                 string unit = cmbUnit.Text;
+                string category = txtCategory.Text;
                 double amount = Convert.ToDouble(txtAmount.Text);
-                Item newItem = new Item(name, unit, amount, shops, user);
+                Item newItem = new Item(name, unit, amount, shops, user, category);
                 migrator.InsertRecord<Item>("Items", newItem);
                 ClearTxtboxes();
                 MessageBox.Show("Dodano jednostkę");
@@ -112,6 +113,7 @@ namespace LesnaPolanaWinApp.Controls
             txtPrize.Text = string.Empty;
             cmbShop.Text = string.Empty;
             cmbUnit.Text = string.Empty;
+            txtCategory.Text = string.Empty;
             shops.Clear();
         }
 
@@ -122,6 +124,7 @@ namespace LesnaPolanaWinApp.Controls
 
         private void BtnListItems_Click(object sender, EventArgs e)
         {
+            this.flwListItems.Controls.Clear();
             pnls[1].BringToFront();
             List<Item> items = new List<Item>();
             items = migrator.LoadRecords<Item>("Items");
@@ -129,27 +132,10 @@ namespace LesnaPolanaWinApp.Controls
             int inc = 0;
             foreach (var item in items)
             {
-                cntrls[inc] = new ItemControl();
-                cntrls[inc] = ParseToControl(item,cntrls[inc]);
+                cntrls[inc] = new ItemControl(item);
                 cntrls[inc++].Width = flwListItems.Width - 30;
             }
             flwListItems.Controls.AddRange(cntrls);
-        }
-
-        private ItemControl ParseToControl(Item item, ItemControl itemControl)
-        {
-            itemControl.ItemName = item.Name;
-            itemControl.Unit = item.Unit;
-            if(item.Shops.Count!=0)
-            {
-                double prize = item.Shops.Values.Min();
-                foreach (var shop in item.Shops)
-                    if (shop.Value == prize)
-                        itemControl.Shop = shop.Key;
-                itemControl.Prize = prize;
-            }
-
-            return itemControl;
         }
     }
 }
